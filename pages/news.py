@@ -158,7 +158,7 @@ Return exactly {n_stories} stories, ordered by impact_level descending then rece
 
     with st.spinner(""):
         resp = client.messages.create(
-            model="claude-opus-4-5",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4000,
             tools=[{"type": "web_search_20250305", "name": "web_search"}],
             messages=[{"role": "user", "content": prompt}]
@@ -188,7 +188,7 @@ Write a concise portfolio digest (4–6 sentences) for a growth-oriented investo
 Keep it direct, no fluff. Plain prose, no bullet points."""
 
     digest_resp = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=400,
         messages=[{"role": "user", "content": digest_prompt}]
     )
