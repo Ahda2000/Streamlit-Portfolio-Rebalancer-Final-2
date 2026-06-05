@@ -159,7 +159,7 @@ Include: tickers already in universe (to screen them), custom additions, AND any
 Aim for 15-25 total tickers. Return US-listed ETF tickers only."""
 
     resp1 = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=1500,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": discovery_prompt}]
@@ -236,7 +236,7 @@ add_to_universe = true only for tickers you genuinely recommend adding (pass or 
 Be selective — recommend at most 3-4 new additions."""
 
     resp3 = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=4000,
         messages=[{"role": "user", "content": reasoning_prompt}]
     )
